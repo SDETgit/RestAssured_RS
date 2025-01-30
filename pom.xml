@@ -1,0 +1,45 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>API_Automation_rahul_sir</groupId>
+  <artifactId>API_Automation_rahul_sir</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+	<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>5.5.0</version>
+   
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.10.2</version>
+  
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+<dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest</artifactId>
+    <version>3.0</version>
+   
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.18.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.10.2</version>
+    <scope>test</scope>
+</dependency>
+
+</dependencies>
+</project>
