@@ -31,6 +31,8 @@ public class S001_Serealization {
 		addBody.setAddress("29, side layout, cohen 09");
 		addBody.setWebsite("https://rahulshettyacademy.com");
 		addBody.setLanguage("French-IN");
+		addBody.setLocation(l);
+		addBody.setTypes(typ);
 		
 		
 		RestAssured.baseURI = "https://rahulshettyacademy.com";

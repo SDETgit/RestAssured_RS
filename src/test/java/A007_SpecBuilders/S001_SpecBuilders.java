@@ -12,6 +12,7 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -39,8 +40,10 @@ public class S001_SpecBuilders {
 		addBody.setAddress("29, side layout, cohen 09");
 		addBody.setWebsite("https://rahulshettyacademy.com");
 		addBody.setLanguage("French-IN");
+		addBody.setLocation(l);
+		addBody.setTypes(typ);
 		
-		
+		System.out.println(l+" dff"+typ+" "+t);
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 		
 		//Spec builder - Request  
@@ -54,10 +57,15 @@ public class S001_SpecBuilders {
 		RequestSpecification res = 	given().log().all().spec(req).body(addBody);
 		
 		Response response = 	res.when().post("/maps/api/place/add/json")
-								.then().spec(resp).extract().response();
+								.then().log().all().spec(resp).extract().response();
 		
 		
 		String resString = response.asString();
+		
+		JsonPath js = new JsonPath(resString);
+		String fd = js.getString("status");
+		String fd1 = js.getString("scope");
+		System.out.println(fd+" "+fd1);
 		System.out.println(resString +" "+response.prettyPrint());
 		System.out.println("Printed ");
 	}

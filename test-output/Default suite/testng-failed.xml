@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="A008_End_to_End_E_Commerce.A001_End_to_end_automation">
+      <class name="A007_SpecBuilders.S001_SpecBuilders">
         <methods>
-          <include name="delete_order"/>
+          <include name="gmap"/>
         </methods>
-      </class> <!-- A008_End_to_End_E_Commerce.A001_End_to_end_automation -->
+      </class> <!-- A007_SpecBuilders.S001_SpecBuilders -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

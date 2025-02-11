@@ -4,7 +4,6 @@
   <artifactId>API_Automation_rahul_sir</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
-	<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 <dependency>
     <groupId>io.rest-assured</groupId>
@@ -12,13 +11,7 @@
     <version>5.5.0</version>
    
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.10.2</version>
-  
-</dependency>
+
 <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
 <dependency>
     <groupId>org.hamcrest</groupId>
