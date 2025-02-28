@@ -9,13 +9,12 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import A005_Deserialization_pojo_classes.S001_courses;
-import A005_Deserialization_pojo_classes.S003_Webautomation;
-import A005_Deserialization_pojo_classes.S004_Api;
-import A005_Deserialization_pojo_classes.S005_mobile;
-import Z001_others.Z003_pojo_classes2.Webaotumation;
-import Z001_others.Z003_pojo_classes2.api;
-import Z001_others.Z003_pojo_classes2.mobile;
+import A005_Deserialization_pojo_classes.S001_courses_pojo;
+import A005_Deserialization_pojo_classes.S001_courses_pojo.*;
+
+import Z001_others.Z002_pojo_classes2.Webaotumation;
+import Z001_others.Z002_pojo_classes2.api;
+import Z001_others.Z002_pojo_classes2.mobile;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 
@@ -42,9 +41,9 @@ public static String token;
 	@Test (priority =2)
 	public static void getCourses () {
 		//RestAssured.baseURI = "https://rahulshettyacademy.com/";
-		Z003_pojo_classes2 response =given().queryParam("access_token", token).log().all()
+		Z002_pojo_classes2 response =given().queryParam("access_token", token).log().all()
 		.when().get("https://rahulshettyacademy.com/oauthapi/getCourseDetails")
-		.then().log().all().statusCode(401).extract().response().as(Z001_others.Z003_pojo_classes2.class);
+		.then().log().all().statusCode(401).extract().response().as(Z001_others.Z002_pojo_classes2.class);
 		
 		System.out.println(response.getLinkedIn());
 		
@@ -55,7 +54,7 @@ public static String token;
 		//iterating via loop 
 		List<mobile> gMobile = response.getCourses().getMobile();
 		List<api> gApi = response.getCourses().getApi();
-		List<Webaotumation> gWebautomation = response.getCourses().getWebaotumation();
+		List<Webaotumation> gWebautomation = response.getCourses().getWebAutomation();
 		
 		String [] titles = {"Selenium Webdriver Java","Cypress","Protractor"};
 		

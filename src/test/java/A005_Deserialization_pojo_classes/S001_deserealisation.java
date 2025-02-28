@@ -9,6 +9,9 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import A005_Deserialization_pojo_classes.S001_courses_pojo.S003_Webautomation;
+import A005_Deserialization_pojo_classes.S001_courses_pojo.S004_Api;
+import A005_Deserialization_pojo_classes.S001_courses_pojo.S005_mobile;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 
@@ -38,9 +41,9 @@ public static String token;
 	@Test (priority =2)
 	public static void getCourses () {
 		//RestAssured.baseURI = "https://rahulshettyacademy.com/";
-		S001_courses response =given().queryParam("access_token", token).log().all()
+		S001_courses_pojo response =given().queryParam("access_token", token).log().all()
 		.when().get("https://rahulshettyacademy.com/oauthapi/getCourseDetails")
-		.then().log().all().statusCode(401).extract().response().as(S001_courses.class);
+		.then().log().all().statusCode(401).extract().response().as(S001_courses_pojo.class);
 		
 		System.out.println(response.getLinkedIn());
 		

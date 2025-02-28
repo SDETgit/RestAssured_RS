@@ -1,13 +1,15 @@
 package A007_SpecBuilders;
 import static io.restassured.RestAssured.given;
 
+
+
 import java.util.ArrayList;
 
 import org.testng.annotations.Test;
 
 import A006_Serealisation_google_map.S002_pojo_class;
-import A006_Serealisation_google_map.S003_pojo_location;
-import A006_Serealisation_google_map.S004_pojo_types;
+import A006_Serealisation_google_map.S002_pojo_class.*;
+
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -26,8 +28,8 @@ public class S001_SpecBuilders {
 		
 		S002_pojo_class addBody = new S002_pojo_class();
 		
-		S003_pojo_location l = new S003_pojo_location();
-		S004_pojo_types typ = new S004_pojo_types();
+		pojo_location l = new pojo_location();
+		pojo_types typ = new pojo_types();
 		ArrayList <String> t = new ArrayList<String> () ; 
 		t.add("shoe park");
 		t.add("shop");

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="A007_SpecBuilders.S001_SpecBuilders">
+      <class name="Z001_others.S001_deserealisation2">
         <methods>
-          <include name="gmap"/>
+          <include name="getCourses"/>
         </methods>
-      </class> <!-- A007_SpecBuilders.S001_SpecBuilders -->
+      </class> <!-- Z001_others.S001_deserealisation2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

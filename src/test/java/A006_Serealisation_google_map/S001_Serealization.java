@@ -3,6 +3,9 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 import java.util.ArrayList;
+import A006_Serealisation_google_map.S002_pojo_class;
+import A006_Serealisation_google_map.S002_pojo_class.pojo_location;
+import A006_Serealisation_google_map.S002_pojo_class.pojo_types;
 
 import org.testng.annotations.Test;
 
@@ -17,8 +20,8 @@ public class S001_Serealization {
 		
 		S002_pojo_class addBody = new S002_pojo_class();
 		
-		S003_pojo_location l = new S003_pojo_location();
-		S004_pojo_types typ = new S004_pojo_types();
+		pojo_location l = new pojo_location();
+		pojo_types typ = new pojo_types();
 		ArrayList <String> t = new ArrayList<String> () ; 
 		t.add("shoe park");
 		t.add("shop");

@@ -19,7 +19,24 @@ public class A005_create_order_pojo {
 
 
 
+
+public static class A006_create_order2 {
+					private String country;
+			private String productOrderedId;
+			public String getCountry() {
+				return country;
+			}
+			public String getProductOrderedId() {
+				return productOrderedId;
+			}
+			public void setCountry(String country) {
+				this.country = country;
+			}
+			public void setProductOrderedId(String productOrderedId) {
+				this.productOrderedId = productOrderedId;
+			}
 		
+}
 }
 
 

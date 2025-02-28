@@ -1,5 +1,6 @@
 package A005_Deserialization_pojo_classes;
 
+import java.util.List;
 
 //What Additional Libraries required?
 //For JSON you need to have either Jackson, Jackson2, Gson or Johnzon in the classpath and for XML you need JAXB.
@@ -33,7 +34,7 @@ package A005_Deserialization_pojo_classes;
 
 
 
-public class S001_courses {
+public class S001_courses_pojo {
 
 	private String instructor;
 	private String url;
@@ -78,5 +79,88 @@ public class S001_courses {
 	public void setLinkedIn(String linkedIn) {
 		this.linkedIn = linkedIn;
 	}
+
+public static class S002_get_courses {
+	private List<S003_Webautomation> webAutomation ;
+	private List<S004_Api> api;
+	private List<S005_mobile> mobile ;
 	
+	
+
+	public List<S003_Webautomation> getWebAutomation() {
+		return webAutomation;
+	}
+	public List<S004_Api> getApi() {
+		return api;
+	}
+	public List<S005_mobile> getMobile() {
+		return mobile;
+	}
+	public void setWebAutomation(List<S003_Webautomation> webAutomation) {
+		this.webAutomation = webAutomation;
+	}
+	public void setApi(List<S004_Api> api) {
+		this.api = api;
+	}
+	public void setMobile(List<S005_mobile> mobile) {
+		this.mobile = mobile;
+	}}
+	
+	public static class S003_Webautomation {
+
+		private String courseTitle;
+		private String price; 
+		
+		
+		public String getCourseTitle() {
+			return courseTitle;
+		}
+		public String getPrice() {
+			return price;
+		}
+		public void setCourseTitle(String courseTitle) {
+			this.courseTitle = courseTitle;
+		}
+		public void setPrice(String price) {
+			this.price = price;
+		}}
+		
+		public static  class S004_Api {
+
+			private String courseTitle;
+			private String price; 
+			
+			
+			public String getCourseTitle() {
+				return courseTitle;
+			}
+			public String getPrice() {
+				return price;
+			}
+			public void setCourseTitle(String courseTitle) {
+				this.courseTitle = courseTitle;
+			}
+			public void setPrice(String price) {
+				this.price = price;
+			}
+		}
+			
+			public static  class S005_mobile {
+
+				private String courseTitle;
+				private String price; 
+				
+				
+				public String getCourseTitle() {
+					return courseTitle;
+				}
+				public String getPrice() {
+					return price;
+				}
+				public void setCourseTitle(String courseTitle) {
+					this.courseTitle = courseTitle;
+				}
+				public void setPrice(String price) {
+					this.price = price;
+				}}
 }

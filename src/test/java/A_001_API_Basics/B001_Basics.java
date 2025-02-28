@@ -1,6 +1,7 @@
 package A_001_API_Basics;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import io.restassured.path.xml.XmlPath;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
@@ -68,12 +69,15 @@ public class B001_Basics {
 		.then().assertThat().log().all().statusCode(200).extract().response().asString();
 		
 		JsonPath js1 = new JsonPath(getPlaceResponse);
-		String actualAddress = js1.getString("address");
+		String actualAddress = js1.get("address");
 		System.out.println(actualAddress);
 		
 		Assert.assertEquals(actualAddress, address); //passed one 
 		//random 
 		Assert.assertEquals(actualAddress, "dsds"); //passed one 
+		
+		
+		//String actualAddress2 = XmlPath().
 	}
 
 }

@@ -1,6 +1,9 @@
 package A008_End_to_End_E_Commerce;
 
 import org.testng.annotations.Test;
+
+import A008_End_to_End_E_Commerce.A005_create_order_pojo.A006_create_order2;
+
 import static io.restassured.RestAssured.given;
 
 import java.io.File;
